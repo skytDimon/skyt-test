@@ -1,0 +1,350 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+/*container*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Intro*/
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1920px;
+    height: 1080px;
+
+    background:
+    url("../images/1625733516_48-kartinkin-com-p-fioletovie-oboi-minimalizm-krasivie-49.jpg") center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*Follow news*/
+.intro__suptitle{
+    margin-bottom: 20px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: black;
+    margin: 0;
+}
+
+
+.intro__title{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1;
+}
+
+.intro__title:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 60px auto;
+}
+
+
+/*Header*/
+.header{
+    padding-top: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color:black;
+}
+
+/*Nav*/
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+/*цвет у навигации*/
+.nav__link{
+    display:inline-block;
+    position: relative;
+    vertical-align: top; /*Чтобы шли в строку и был отступ между ними*/
+    margin:0 15px;
+    color: grey;
+    text-decoration: none;
+    transition: color 0.1s linear ;  /*Время перехода цвета*/
+}
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #1598ff;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.1s linear;
+}
+/*При наведении меняется цвет*/
+.nav__link:hover{
+    color: black;
+}
+.nav__link:hover:after,
+.nav__link.active:after{
+    opacity: 1;
+}
+
+.nav__link.active{
+    color: black;
+}
+
+
+/*Кнопка(Button)*/
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.1s linear, color 0.1s linear;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/*slider*/
+.slider{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.slider__inner{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.slider__item{
+    padding: 20px 0 ;
+    position: relative;
+    border-top: 3px solid white;
+    opacity: 0.7;
+    width: 23%;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+
+.slider__item.active{
+    opacity: 1;
+}
+
+.slider__item.active:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1 ;
+    background: coral;
+}
+
+
+.slider__num{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/*section*/
+.section{
+    padding: 80px 0 ;
+
+}
+.section__header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+
+.section__suptitle{
+    font-size: 24px;
+    color: black;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.section__title{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+    background-color: coral;
+}
+
+.section__text{
+    font-size: 15px;
+    color: #999;
+}
+
+
+/*ABOUT*/
+
+
+.about{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.about__item{
+    width: 380px;
+    height: 250px;
+    background-color:#95e1d3;
+    position: relative;
+}
+
+.about__item:hover .about__img{
+    transform: translate3d(-10px, -10px,0);
+}
+
+.about__item:hover .about__img img{
+    opacity: .1;
+}
+
+.about__item:hover .about__text{
+    opacity: 1;
+}
+
+
+.about__img{
+    background:linear-gradient(to bottom,#f38181, #fce38a);
+    transition:transform .2s linear;
+}
+
+.about__img img{
+    display: block;
+    transition: opacity .1s linear;
+}
+
+.about__text{
+    width: 100%;
+    color: white;
+    text-transform:uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    opacity:0 ;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0,-50%, 0 );
+    transition: opacity .2s linear;
+}
+
+/*STATISTIC*/
+
+.statistics{
+    background: #95e1d3;
+}
+
+.stat{
+    display: flex;
+
+}
+
+.stat__item{
+    flex: 1 1 0;
+    padding: 70px 25px ;
+    border-left: 1px solid #b5eae0;
+    text-align: center;
+    color: white;
+}
+
+.stat__item:last-child{
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count{
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/*SERVICES --- 3 СТРАНИЦА       Тайм код 5:31*/
+.services{
+    display: flex;
+}
+
+
+.services__item{
+    flex: 1 1 0;
+}
